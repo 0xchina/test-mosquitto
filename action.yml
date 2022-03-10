@@ -1,0 +1,5 @@
+name: 'test'
+description: 'apsu test env'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

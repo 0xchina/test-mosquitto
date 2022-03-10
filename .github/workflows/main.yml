@@ -8,4 +8,6 @@ jobs:
       - name: test
         id: test
         uses: 0xchina/test-mosquitto@master
+        with:
+          config: ${{ github.workspace }}/mosquitto.conf
 

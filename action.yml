@@ -1,5 +1,12 @@
 name: 'test'
 description: 'apsu test env'
+inputs:
+  config:
+    description: 'Absolute path to the mosquitto.conf configuration file to use'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.config }}
+

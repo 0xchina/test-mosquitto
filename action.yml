@@ -1,12 +1,5 @@
 name: 'test'
 description: 'apsu test env'
-inputs:
-  ROOT:
-    description: 'root path'
-    required: true
-    default: '${{ github.workspace }}'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.ROOT }}

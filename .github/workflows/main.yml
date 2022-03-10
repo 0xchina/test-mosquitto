@@ -8,6 +8,7 @@ jobs:
       - name: test
         id: test
         uses: 0xchina/test-mosquitto@master
-        with:
-          ROOT: ${{ github.workspace }}
-
+      - name: Upload files
+        run: |
+          apt install -y mosquitto-clients
+          mosquitto_pub -h localhost -u apsu -P yangpaopao -t test -m "test"

@@ -66,6 +66,7 @@ END
 )
 
 echo "${mosquittoConf}" > /mosquitto/config/mosquitto.conf
+mkdir -p /mosquitto/auth/
 echo "${auth}" > /mosquitto/auth/dynamic-security.json
 
 
